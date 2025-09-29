@@ -13,126 +13,78 @@ The program can be invoked with one of the following commands:
 
 -   *add-user* - Add a user to the list of known users.
 
-    > -   
+    >     [user]
+    >       A Last.fm username.
     >
-    >     \[user\]
-    >
-    >     :   A Last.fm username.
-    >
-    > -   
-    >
-    >     \[\--password, -p\]
-    >
-    >     :   The corresponding password.
+    >     [--password, -p]
+    >        The corresponding password.
     >
     > If a username is provided, you will be prompted for a password. If
     > the command is invoked without any arguments, a Last.fm
     > authorization web-page will be opened for you to grant access to
     > the application.
     >
-    > -   
-    >
-    >     \[\--dont-invoke-browser, -x\]
-    >
-    >     :   When invoking the command without arguments, always show
-    >         the authentication URL; never try to automatically open
-    >         it.
+    >     [--dont-invoke-browser, -x]
+    >       When invoking the command without arguments, always show
+    >       the authentication URL; never try to automatically open
+    >       it.
 
 -   *list-users* - List known users and their corresponding session
     keys.
 
 -   *remove-user* - Remove a user from the list of known users.
 
-    > -   
-    >
     >     user
-    >
-    >     :   The user to remove.
+    >        The user to remove.
 
 -   *scrobble* - Scrobble a track.
 
-    > -   
-    >
     >     user
-    >
-    >     :   The username to scrobble with. If the user isn\'t known,
-    >         you will be prompted for a password.
-    >
-    > -   
+    >        The username to scrobble with. If the user isn\'t known,
+    >        you will be prompted for a password.
     >
     >     artist
-    >
-    >     :   The name of the artist.
-    >
-    > -   
+    >        The name of the artist.
     >
     >     track
-    >
-    >     :   The name of the track.
-    >
-    > -   
+    >        The name of the track.
     >
     >     time
+    >        The time of listening. Formatted by \--time-format. It may
+    >        also be *now*, in which case the current time is used.
     >
-    >     :   The time of listening. Formatted by \--time-format. It may
-    >         also be *now*, in which case the current time is used.
+    >     [--time-format, -tf]
+    >        Specifies the format of *time*, using the syntax of
+    >        [strftime()](http://docs.python.org/dev/library/time.html#time.strftime).
+    >        Defaults to *%Y-%m-%d.%H:%M*.
     >
-    > -   
+    >     [--album, -a]
+    >        The name of the album.
     >
-    >     \[\--time-format, -tf\]
-    >
-    >     :   Specifies the format of *time*, using the syntax of
-    >         [strftime()](http://docs.python.org/dev/library/time.html#time.strftime).
-    >         Defaults to *%Y-%m-%d.%H:%M*.
-    >
-    > -   
-    >
-    >     \[\--album, -a\]
-    >
-    >     :   The name of the album.
-    >
-    > -   
-    >
-    >     \[\--duration, -d\]
-    >
-    >     :   Has the format of XXhYYmZZs. At least one of those has to
-    >         be present, but any number of them can be specified, and
-    >         in any order.
+    >     [--duration, -d]
+    >        Has the format of XXhYYmZZs. At least one of those has to
+    >        be present, but any number of them can be specified, and
+    >        in any order.
 
 -   *now-playing* - Update the now-playing status.
 
-    > -   
-    >
     >     user
-    >
-    >     :   The username to use. If the user isn\'t known, you will be
-    >         prompted for a password.
-    >
-    > -   
+    >        The username to use. If the user isn\'t known, you will be
+    >        prompted for a password.
     >
     >     artist
-    >
-    >     :   The name of the artist.
-    >
-    > -   
+    >        The name of the artist.
     >
     >     track
+    >        The name of the track.
     >
-    >     :   The name of the track.
+    >     [--album, -a]
+    >        The name of the album.
     >
-    > -   
-    >
-    >     \[\--album, -a\]
-    >
-    >     :   The name of the album.
-    >
-    > -   
-    >
-    >     \[\--duration, -d\]
-    >
-    >     :   Has the format of XXhYYmZZs. At least one of those has to
-    >         be present, but any number of them can be specified, and
-    >         in any order.
+    >     [--duration, -d]
+    >        Has the format of XXhYYmZZs. At least one of those has to
+    >        be present, but any number of them can be specified, and
+    >        in any order.
 
 # Examples
 
