@@ -75,14 +75,12 @@ class Error(Exception):
     def __init__(self, msg):
         super().__init__("Error: {}.".format(msg))
 
-    pass
-
 
 def duration_to_seconds(string):
     if string is None:
         return None
 
-    durations = re.findall("\d+[hms]", string)
+    durations = re.findall(r"\d+[hms]", string)
     seconds = 0
     for duration in durations:
         time = int(duration[:-1])
